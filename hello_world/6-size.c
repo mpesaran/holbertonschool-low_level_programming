@@ -2,11 +2,6 @@
 
 /**
  *main - This function is to print sizes of data types
- *@c: The character data
- *@i: The integer data
- *@li: The long integer data
- *@lli: The long long integer data
- *@f: The float data
  *
  *Description: What returns from sizeof function is
  *type size_t and zu should use for it
