@@ -4,6 +4,8 @@
 
 /**
  *  main - Prints if the random number is negative,positive or zero
+ *
+ *  Return: shows the number is positive or not
 */
 int main(void)
 {
