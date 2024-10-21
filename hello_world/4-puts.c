@@ -1,6 +1,8 @@
 #include<stdio.h>
 
-/* This function prints a message using puts*/
+/**
+ *  main - This is to output a string using puts
+*/
 int main(void)
 {
 	puts("\"Programming is like building a multilingual puzzle");
