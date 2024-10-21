@@ -3,7 +3,7 @@
 /**
  * main - This function will print a string using printf
  *
- * Return : non negative number if executed successfully
+ * Return: non negative number if executed successfully
 */
 int main(void)
 {
