@@ -2,6 +2,8 @@
 
 /**
  *  main - This is to output a string using puts
+ *
+ *  Return: non negative number if the executed successfuly
 */
 int main(void)
 {
