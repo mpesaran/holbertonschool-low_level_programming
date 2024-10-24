@@ -9,16 +9,5 @@
  */
 int add(int a, int b)
 {
-	int result;
-
-	result = a + b;
-	if (result < 10)
-	{
-		_putchar('0' + result);
-	}
-	else
-	{
-		_putchar('0' + result / 10);
-		_putchar('0' + result % 10);
-	}
+	return (a + b);
 }
