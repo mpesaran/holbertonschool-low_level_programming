@@ -12,14 +12,14 @@ void print_times_table(int n)
 	int col = 0;
 	int result;
 
-	if ( n > 15 || n < 0)
+	if (n > 15 || n < 0)
 		return;
 
 	while (row <= n)
 	{
 		while (col <= n)
 		{
-			result = col* row;
+			result = col * row;
 
 			if (col == 0)
 			{
@@ -31,7 +31,7 @@ void print_times_table(int n)
 				{
 					_putchar(',');
 					_putchar(' ');
-					_putchar('0' + result/100);
+					_putchar('0' + result / 100);
 					_putchar('0' + (result % 100) / 10);
 					_putchar('0' + (result % 100) % 10);
 				}
