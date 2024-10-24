@@ -16,17 +16,23 @@ void times_table(void)
 		while (num2 <= 9)
 		{
 			product = num1 * num2;
-			if (product < 10)
+			if (num2 == 0)
 			{
 				_putchar('0' + product);
-				_putchar(' ');
 			}
 			else
 			{
-				_putchar('0' + product / 10);
-				_putchar('0' + product % 10);
 				_putchar(',');
 				_putchar(' ');
+				if (product < 10)
+				{
+					_putchar(' ');
+				}	
+				else
+				{
+					_putchar('0' + product / 10);
+				}
+				_putchar('0' + product % 10);
 			}
 			num2++;
 		}
