@@ -14,7 +14,7 @@ void sum(void)
 		{
 			result = result + n;
 		}
-		n++
+		n++;
 	}
 	printf("%d\n", result);
 }
