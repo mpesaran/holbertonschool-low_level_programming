@@ -4,7 +4,7 @@
  * print_times_table - print times table for numbers less than 15
  * @n: number of rows and cols
  *
- * Retuen: void
+ * Return: void
  */
 void print_times_table(int n)
 {
@@ -13,7 +13,7 @@ void print_times_table(int n)
 	int result;
 
 	if ( n > 15 || n < 0)
-		_putchar('0');
+		return;
 
 	while (row <= n)
 	{
