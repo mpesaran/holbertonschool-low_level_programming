@@ -12,7 +12,8 @@ void print_times_table(int n)
 	int col = 0;
 	int result;
 
-	if ( n > 15 || n < 0) break;
+	if ( n > 15 || n < 0)
+		_putchar('0');
 
 	while (row <= n)
 	{
