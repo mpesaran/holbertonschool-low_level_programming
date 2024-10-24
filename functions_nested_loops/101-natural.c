@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include "main.h"
 
 /**
  * sum - will add all the numbers less than 1024 that are multiple of 3 or 5
