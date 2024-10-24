@@ -3,7 +3,7 @@
 /**
  * times_table - prints the 9 times table starting from 0
  *
- * Return: void 
+ * Return: void
  */
 void times_table(void)
 {
@@ -27,7 +27,7 @@ void times_table(void)
 				if (product < 10)
 				{
 					_putchar(' ');
-				}	
+				}
 				else
 				{
 					_putchar('0' + product / 10);
