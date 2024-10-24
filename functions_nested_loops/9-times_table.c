@@ -9,14 +9,25 @@ void times_table(void)
 {
 	int num1 = 0;
 	int num2 = 0;
+	int product;
 
 	while (num1 <= 9)
 	{
 		while (num2 <= 9)
 		{
-			_putchar('0' + num1 * num2);
-			_putchar(',');
-			_putchar(' ');
+			product = num1 * num2;
+			if (product < 10)
+			{
+				_putchar('0' + product);
+				_putchar(' ');
+			}
+			else
+			{
+				_putchar('0' + product / 10);
+				_putchar('0' + product % 10);
+				_putchar(',');
+				_putchar(' ');
+			}
 			num2++;
 		}
 		_putchar('\n');
