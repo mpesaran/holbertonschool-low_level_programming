@@ -1,14 +1,14 @@
 #include "main.h"
 
 /**
- *print_most_numbers - print numbers 0 to 9 except 2 and 4
+ * print_most_numbers - print numbers 0 to 9 except 2 and 4
  */
 void print_most_numbers(void)
 {
-	int i = 0;
-	while ( i <= 9)
+	int i = 48;
+	while ( i <= 57)
 	{
-		if (i != 2 || i != 4)
+		if (i != 50 || i != 52)
 		{
 			_putchar(i);
 		}
