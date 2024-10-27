@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- *
+ * more_numbers - print numbers 0 to 14 for 10 times
  */
 void more_numbers(void)
 {
@@ -14,7 +14,10 @@ void more_numbers(void)
 
 		while (j <= 14)
 		{
-			_putchar('0' + j / 10);
+			for (j >= 10)
+			{
+				_putchar('0' + j / 10);
+			}
 			_putchar('0' + j % 10);
 			j++;
 		}
