@@ -3,5 +3,6 @@
 
 int _isupper(int);
 int _isdigit(int);
+void print_numbers(void);
 
 #endif
