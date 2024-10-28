@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
- * msin - prints 1 to 100 except multiplies of 3, 5 and 15
+ * main - prints 1 to 100 except multiplies of 3, 5 and 15
  *
  * Return: 0 always
  */
@@ -19,9 +19,13 @@ int main(void)
 		{
 			printf("Fizz ");
 		}
-		else if (n % 5 == 0)
+		else if (n % 5 == 0 && n != 100)
 		{
 			printf("Buzz ");
+		}
+		else if (n == 100)
+		{
+			printf("Buzz");
 		}
 		else
 		{
