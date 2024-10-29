@@ -4,7 +4,7 @@
  * puts2 - prints every other character of a strin
  * @str: Pointer to the string to be processed.
  */
-void puts2(char *s)
+void puts2(char *str)
 {
 	int toggle = 1;
 
