@@ -1,6 +1,6 @@
 #include "main.h"
 #include <stdio.h>
-  
+ 
 /**
  * print_array - print the first n numbers in array
  * @a: the array to be processed
@@ -14,7 +14,7 @@ void print_array(int *a, int n)
 	{
 		printf("%d", *ptr);
 		if (ptr + 1 < a + n)
-			printf(" ,");
+			printf(", ");
 
 	}
 	printf("\n");
