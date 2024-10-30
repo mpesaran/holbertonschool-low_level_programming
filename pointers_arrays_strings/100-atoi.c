@@ -31,14 +31,15 @@ int _atoi(char *s)
 				result = result * 10 + (*s - '0');
 				s++;
 			}
-			while (*s <= '0' && *s <= '9')
+			while (*s <= '0' && *s <= '9');
 			break;
 		}
-		if (*s < '0' || s > '9')
+		if (*s < '0' || *s > '9')
 		{
 			s++;
 		}
 	}
-	if (count % 2 != 0) ? sign = -1 : sign = +1;
+	if (count % 2 != 0) 
+		sign = -1;
 	return (result * sign);
 }
