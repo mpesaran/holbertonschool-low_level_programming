@@ -21,6 +21,10 @@ int _atoi(char *s)
 			count++;
 			s++;
 		}
+		else if (*s == '+')
+		{
+			continue;
+		}
 		else if (*s >= '0' && *s <= '9')
 		{
 			result = result * 10 + (*s - '0');
