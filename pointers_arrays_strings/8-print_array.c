@@ -1,6 +1,6 @@
 #include "main.h"
 #include <stdio.h>
- 
+
 /**
  * print_array - print the first n numbers in array
  * @a: the array to be processed
