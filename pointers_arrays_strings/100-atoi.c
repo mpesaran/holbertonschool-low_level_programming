@@ -7,6 +7,7 @@ int _atoi(char *s)
 {
 	int result = 0;
 	int sign = 1;
+	int count = 0;
 	
 	while (*s)
 	{
@@ -17,7 +18,7 @@ int _atoi(char *s)
 		}
 		if (*s == '-')
 		{
-			sign = sign * -1;
+			count++;
 			s++;
 		}
 		else if (*s >= '0' && *s <= '9')
@@ -29,6 +30,10 @@ int _atoi(char *s)
 		{
 			break;
 		}
+	}
+	if (count % 2 != 0)
+	{
+		sign = -1;
 	}
 	return (result * sign);
 }
