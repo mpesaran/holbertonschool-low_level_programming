@@ -9,7 +9,7 @@
 void print_array(int *a, int n)
 {
 	int *end = a + n;
-	int *ptr = a
+	int *ptr = a;
 
 	for (*ptr = a; ptr < end; ptr++)
 	{
