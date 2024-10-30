@@ -9,34 +9,36 @@ int _atoi(char *s)
 	int sign = 1;
 	int count = 0;
 	
+	while (*s ==' ')
+	{
+		s++;
+	}
 	while (*s)
 	{
-		if ((*s < '0' || *s > '9') && *s != '-' && *s != '+')
+		if (*s == '-')
+		{
+			count++;
+			s++;
+		}
+		else if (*s == '+')
 		{
 			s++;
-			continue;
-		}
-		if (*s == '-' || *s == '+')
+		}		
+		if (*s >= '0' && *s <= '9')
 		{
-			if (*s == '-')
+			do
 			{
-				count++;
+				result = result * 10 + (*s - '0');
+				s++;
 			}
-			s++;
-		}
-		else if (*s >= '0' && *s <= '9')
-		{
-			result = result * 10 + (*s - '0');
-			s++;
-		}
-		else
-		{
+			while (*s <= '0' && *s <= '9')
 			break;
 		}
+		if (*s < '0' || s > '9')
+		{
+			s++;
+		}
 	}
-	if (count % 2 != 0)
-	{
-		sign = -1;
-	}
+	if (count % 2 != 0) ? sign = -1 : sign = +1;
 	return (result * sign);
 }
