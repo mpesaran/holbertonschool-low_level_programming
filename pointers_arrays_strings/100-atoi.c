@@ -9,13 +9,14 @@ int _atoi(char *s)
 	int sign = 1;
 	int count = 0;
 	
-	while (*s ==' ')
-	{
-		s++;
-	}
+
 	while (*s)
 	{
-		if (*s == '-')
+		if (*s == ' ')
+		{
+			s++;
+		}
+		else if (*s == '-')
 		{
 			count++;
 			s++;
@@ -25,14 +26,10 @@ int _atoi(char *s)
 			s++;
 		}		
 		if (*s >= '0' && *s <= '9')
-		{
-			do
-			{
-				result = result * 10 + (*s - '0');
-				s++;
-			}
-			while (*s <= '0' && *s <= '9');
-			break;
+		{	
+			result = result * 10 + (*s - '0');
+			s++;
+			flag = 1;		
 		}
 		if (*s < '0' || *s > '9')
 		{
