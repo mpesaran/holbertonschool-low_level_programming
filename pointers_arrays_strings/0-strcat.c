@@ -4,12 +4,14 @@
  * *_strcat - concates one string to another
  * @src: the string to be copied
  * @dest: final string
+ *
+ * Return: Concatinated string
  */
 char *_strcat(char *dest, char *src)
 {
 	char *ptr = dest;
 
-	while (*ptr !='\0')
+	while (*ptr != '\0')
 	{
 		ptr++;
 	}
