@@ -27,10 +27,12 @@ int _atoi(char *s)
 			if (sign == -1 && result == (INT_MIN + digit) / 10)
                         {
                                  return (INT_MIN);
+				 break;
                         }
 			else if (sign == +1 && result == (INT_MAX - digit) / 10)
 			{
 				return (INT_MAX);
+				break;
 			}
 			else
 			{
