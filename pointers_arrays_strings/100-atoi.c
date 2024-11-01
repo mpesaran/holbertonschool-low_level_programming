@@ -24,15 +24,13 @@ int _atoi(char *s)
 		else if (s[i] >= '0' && s[i] <= '9')
 		{	
 			digit = (s[i] - '0');
-			if (sign == -1 && result == (INT_MIN + digit) / 10)
+			if (sign == -1 && result > (INT_MIN + digit) / 10)
                         {
                                  return (INT_MIN);
-				 break;
                         }
-			else if (sign == +1 && result == (INT_MAX - digit) / 10)
+			else if (sign == +1 && result > (INT_MAX - digit) / 10)
 			{
 				return (INT_MAX);
-				break;
 			}
 			else
 			{
