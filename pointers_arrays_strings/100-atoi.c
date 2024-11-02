@@ -2,7 +2,10 @@
 #include <limits.h>
 
 /**
- * 
+ * _atoi - Return a string to int numbers
+ * @s: the string to be processed
+ *
+ * Return: depends on string has different return, but final return is an integer
  */
 int _atoi(char *s)
 {
@@ -24,13 +27,13 @@ int _atoi(char *s)
 		else if (s[i] >= '0' && s[i] <= '9')
 		{	
 			digit = (s[i] - '0');
-			if (sign == -1 && result > (INT_MIN + digit) / 10)
-                        {
-                                 return (INT_MIN);
-                        }
-			else if (sign == +1 && result > (INT_MAX - digit) / 10)
+			if (result > INT_MAX / 10 || (result == INT_MAX / 10 && digit > 7))
 			{
-				return (INT_MAX);
+				return (sign == 1 ? INT_MAX : INT_MIN);
+			}
+			else if (result < INT_MIN / 10 || (result == INT_MIN / 10 && digit > 8))
+			{
+				return (sign == 1 ? INT_MAX : INT_MIN);
 			}
 			result = result * 10 + digit;
 			if (s[i + 1] < '0' || s[i + 1] > '9')
