@@ -31,5 +31,5 @@ int sqr_root(int n, int odd, int count)
 	{
 		return (-1);
 	}
-	return (sqr_root(n - odd, odd + 2, count + 1));	
+	return (sqr_root(n - odd, odd + 2, count + 1));
 }
