@@ -4,7 +4,7 @@
  * @argc: number of arguments
  * @argv: array of string
  *
- *Return - 0 if it was successful
+ * Return: 0 if it was successful
  */
 int main(int argc, char *argv[])
 {
