@@ -3,7 +3,11 @@
 #include <stdlib.h>
 #include <ctype.h>
 /**
+ * main - sums integers entered in commandline
+ * @argc: number of arguments
+ * @argv: array of strings
  *
+ * Return: 0 if there is no number, 1 if there is not integer arguments
  */
 int main(int argc, char *argv[])
 {
@@ -27,6 +31,12 @@ int main(int argc, char *argv[])
 	printf("%d\n", sum);
 	return (0);
 }
+/**
+ * is_number - chacks a string to see if it is a digit
+ * @str: string to be processed
+ *
+ * Return: 0 if it is not difgit, 1 otherwise
+ */
 int is_number(char *str)
 {
 	int i;
