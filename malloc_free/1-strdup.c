@@ -2,13 +2,16 @@
 #include <stdlib.h>
 
 /**
+ * *_strdup - points to a newly allocated space in memory,contains str
+ * @str: string to be copied
  *
+ * Return: null if str is emty, otherwise pointer to new space
  */
 char *_strdup(char *str)
 {
 	char *dup;
 	char *original = str;
-	int len, i;
+	int len = 0, i;
 
 	if (str == NULL)
 	{
