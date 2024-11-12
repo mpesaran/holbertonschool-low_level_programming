@@ -1,8 +1,11 @@
 #include "main.h"
 #include <stdlib.h>
 /**
+ * *_calloc - allocates memory for an array using malloc
+ * @size: amount of bytes
+ * @nmemb: length of array
  *
- *
+ *Return: pointer to the new memory space
  */
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
