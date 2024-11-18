@@ -30,7 +30,7 @@ int main(int argc, char *argv[])
 	}
 	if ((*argv[2] == '/' || *argv[2] == '%') && num2 == 0)
 	{
-		printf("Eroor\n");
+		printf("Error\n");
 		exit(100);
 	}
 	result = operation(num1, num2);
