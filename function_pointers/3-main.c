@@ -1,6 +1,8 @@
 #include "3-calc.h"
 #include <stdio.h>
 #include <stdlib.h>
+#include <stddef.h>
+#include <string.h>
 /**
  * main - gets user inputs as args and returns result
  * @argc: number of arguments entered by user
@@ -21,7 +23,7 @@ int main(int argc, char *argv[])
 	num1 = atoi(argv[1]);
 	num2 = atoi(argv[3]);
 	operation = get_op_func(argv[2]);
-	if (operation == NULL)
+	if (operation == NULL || strlen(argv[2]) > 1)
 	{
 		printf("Error\n");
 		exit(99);
