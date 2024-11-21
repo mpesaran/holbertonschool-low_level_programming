@@ -37,6 +37,7 @@ void print_all(const char * const format, ...)
 {
 	int i = 0, j;
 	va_list args;
+	char *separator = "";
 
 	fmt_t formats[] = {
         	{'c', print_char},
@@ -54,11 +55,10 @@ void print_all(const char * const format, ...)
 		{
 			if (format[i] == formats[j].t)
 			{
+				printf("%s",separator);
 				formats[j].f(args);
-				if (format[i + 1] != '\0')
-				{
-					printf(", ");
-				}
+				separator = ", ";
+				break;
 			}
 			j++;
 		}
