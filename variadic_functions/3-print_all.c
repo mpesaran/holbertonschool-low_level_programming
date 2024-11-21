@@ -2,36 +2,60 @@
 #include <stdarg.h>
 #include <stdio.h>
 /**
+ * struct format_spec - specifies different formats
  *
+ * @t: the type
+ * @f: the function associated
  */
 typedef struct format_spec
 {
 	char t;
 	void (*f)(va_list args);
 }fmt_t;
+/**
+ * print_char - prints if the args is char
+ * @args: passed argument
+ */
 void print_char(va_list args)
 {
 	printf("%c", va_arg(args, int));
 }
+/**
+ * print_int - prints if the args is int
+ * @args: passed argument
+ */
 void print_int(va_list args)
 {
 	printf("%i", va_arg(args, int));
 }
+/**
+ * print_float - prints if the args is float
+ * @args: passed argument
+ */
 void print_float(va_list args)
 {
 	printf("%f", va_arg(args, double));
 }
+/**
+ * print_string - prints if the args is string
+ * @args: passed argument
+ */
 void print_string(va_list args)
 {
 	char *str = va_arg(args, char *);
-	if (*str == '\0')
+	if (str == NULL)
 	{
-		str = "(nill)";
+		printf("(nil)");
 	}
-	printf("%s", str);
+	else
+	{
+		printf("%s", str);
+	}
 }
 /**
- *
+ * print_all - checks the format against strunct and call the associated 
+ * function
+ * @format: a string to show types of next arguments
  */
 void print_all(const char * const format, ...)
 {
@@ -55,7 +79,7 @@ void print_all(const char * const format, ...)
 		{
 			if (format[i] == formats[j].t)
 			{
-				printf("%s",separator);
+				printf("%s", separator);
 				formats[j].f(args);
 				separator = ", ";
 				break;
