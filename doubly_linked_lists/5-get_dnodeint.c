@@ -1,17 +1,17 @@
 #include "lists.h"
 
 /**
- * get_nodeint_at_index - Gets an specific node of a list
+ * get_dnodeint_at_index - Gets an specific node of a list
  * @head: pointer to the start of a list
- * @index: index of the node 
+ * @index: index of the node
  *
- * Return the node at index, Null if node doesn't exist
+ * Return: the node at index, Null if node doesn't exist
  */
 dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index)
 {
 	dlistint_t *curr = head;
 	unsigned int count = 0;
-	
+
 	if (head == NULL)
 		return (NULL);
 	while (curr->next != NULL)
@@ -21,5 +21,7 @@ dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index)
 		count++;
 		curr = curr->next;
 	}
+	if (index > count)
+		return (NULL);
 	return (curr);
 }
