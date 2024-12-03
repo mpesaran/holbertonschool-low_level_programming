@@ -17,7 +17,7 @@ size_t print_dlistint(const dlistint_t *h)
 	{
 		t = curr->n;
 		_putchar(t + '0');
-		-putchar('\n');
+		_putchar('\n');
 		len++;
 		curr = curr->next;
 	}
