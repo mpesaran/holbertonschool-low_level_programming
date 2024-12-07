@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * flip_bits - 
+ * flip_bits - flips number1 to number 2 and counts different bits
  * @n: number to be processed
  * @m: second number
  *
