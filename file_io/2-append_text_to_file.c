@@ -5,7 +5,7 @@
 /**
  * append_text_to_file - appends text at the ned of a file
  * @filename: name of the file
- * @text_content - string to be added to the file
+ * @text_content: string to be added to the file
  *
  * Return: 1 if successful, otherwise -1
  */
@@ -33,5 +33,5 @@ int append_text_to_file(const char *filename, char *text_content)
 	}
 	if (close(fd) == -1)
 		return (-1);
-	return(1);
+	return (1);
 }
