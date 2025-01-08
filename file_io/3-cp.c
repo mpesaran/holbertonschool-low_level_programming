@@ -49,6 +49,8 @@ int main(int argc, char *argv[])
 		if (bytes_written == -1 || bytes_written != bytes_read)
 			error_exit("Error: Can't write to %s\n", 99, argv[2]);
 		bytes_read = read(fd_from, buffer, 1024);
+		if (bytes_read == -1)
+			error_exit("Error: Can't read from %s\n", 98, argv[1]);
 	}
 	if (close(fd_from) == -1)
 		error_exit("Error: Can't close fd %d\n", 100, NULL);
